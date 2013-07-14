@@ -135,7 +135,7 @@ class Login(AppHandler):
         else:
             self.render('login.html', error = "Invalid Login")
             
-class Logout(AppHandler):
+class LogOut(AppHandler):
     def get(self):
         self.response.headers.add_header('Set-Cookie', 'user_id=%s; Path=/' % "")
         self.redirect('/')

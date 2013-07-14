@@ -1,0 +1,220 @@
+<!DOCTYPE HTML>
+
+<head>
+	
+	<link rel="stylesheet" type="text/css" href="ingredients-form.css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
+	<script type="text/javascript" src="ingredients-form.js"></script>
+	
+	<title>
+		Your Drink Ingredients
+	</title>
+	
+</head>
+
+<body>
+	<h1 class="top-header">
+		<div class="header">Your Bar:</div>
+	</h1>
+	
+	<form id="main-accordion-form">
+		
+		<h2 class="drink-type-header">
+			<div class="sub-header">Hard Liquors and Fermented Beverages:</div>
+		</h2>
+		<div class="drink-list">
+			<input type="checkbox" name="absinthe">Absinthe<br>
+			<input type="checkbox" name="beerale">Beer (Ale)<br>
+			<input type="checkbox" name="beerlager">Beer (Lager)<br>
+			<input type="checkbox" name="beerwheat">Beer (Wheat)<br>
+			<input type="checkbox" name="brandy">Brandy<br>
+			<input type="checkbox" name="gin">Gin<br>
+			<input type="checkbox" name="tequilajoven">Tequila (Anejo)<br>
+			<input type="checkbox" name="tequilablanco">Tequila (Blanco)<br>
+			<input type="checkbox" name="tequilareposado">Tequila (Reposado)<br>
+			<input type="checkbox" name="rumdark">Rum (Dark)<br>
+			<input type="checkbox" name="rumlight">Rum (Light)<br>
+			<input type="checkbox" name="rumspiced">Rum (Spiced)<br>
+			<input type="checkbox" name="vodka">Vodka<br>
+			<input type="checkbox" name="whiskybourbon">Whisky (Bourbon)<br>
+			<input type="checkbox" name="whiskyscotch">Whisky (Scotch)<br>
+			<input type="checkbox" name="winered">Wine (Red)<br>
+			<input type="checkbox" name="winewhite">Wine (White)<br>
+			<input type="checkbox" name="winesparkling">Wine (Sparkling)<br>
+			<input type="checkbox" name="winevermouthdry">Wine (Dry Vermouth)<br>
+			<input type="checkbox" name="winevermouthsweet">Wine (Sweet Vermouth)<br>			
+		</div>
+		
+		<h2 class="drink-type-header">
+			<div class="sub-header">Liqueurs:</div>
+		</h2>
+		<!-- make these in collapsible menus -->
+		<h3 class="drink-subtype-header">
+			<div class="sub-sub-header">Berry Liqueurs</div>
+		</h3>
+		<div class="drink-list">
+			<input type="checkbox" name="berryblackberry">Blackberry (ex: 99 Blackberries)<br>
+			<input type="checkbox" name="berryblackcurrant">Blackcurrant (ex: Cr&egrave;me de cassis)<br>
+			<input type="checkbox" name="berrycherry">Cherry (ex: Wi&#347;ni&oacute;wka)<br>
+			<input type="checkbox" name="berrycloudberry">Cloudberry (ex: Lakka)<br>
+			<input type="checkbox" name="berrycranberry">Cranberry (ex: &#379;urawin&oacute;wka)<br>
+			<input type="checkbox" name="berrygoji">Goji Berry<br>
+			<input type="checkbox" name="berryguavaberry">Guavaberry<br>
+			<input type="checkbox" name="berrylingonberry">Lingonberry (ex: Lillehammer)<br>
+			<input type="checkbox" name="berryloganberry">Loganberry (ex: Whidbeys)<br>
+			<input type="checkbox" name="berryraspberry">Raspberry (ex: Chambord)<br>
+			<input type="checkbox" name="berrysloegin">Sloe Gin<br>
+			<input type="checkbox" name="berrystrawberry">Strawberry (ex: XUXU)<br>
+			<input type="checkbox" name="berryugnimolinae">Ugni Molinae Berry(ex: Murtado)<br>
+		</div>
+				
+		<h3 class="drink-subtype-header">
+			<div class="sub-sub-header">Chocolate Liqueurs</div>
+		</h3>
+		<div class="drink-list">
+			<input type="checkbox" name="chocolatecream">Chocolate Cream (ex: Mozart Gold Chocolate Cream)<br>
+			<input type="checkbox" name="chocolatedark">Dark Chocolate (ex: Godiva Dark)<br>
+			<input type="checkbox" name="chocolatewhite">White Chocolate (ex: Godiva White)<br>
+			<input type="checkbox" name="chocolateanise">Anise Chocolate (ex: Djangoa)<br>
+			<input type="checkbox" name="chocolatecoconut">Coconut Chocolate (ex: Afrikoko)<br>
+			<input type="checkbox" name="cocolatehazelnut">Hazelnut Chocolate (ex: Bicerin di Gianduiotto)<br>
+			<input type="checkbox" name="chocolatemint">Mint Chocolate (ex: Royal Mint-Chocolate)<br>
+			<input type="checkbox" name="chocolateorange">Orange Chocolate (ex: Florcello Chocolate Orange Cream)<br>
+		</div>
+				
+		<h3 class="drink-subtype-header">
+			<div class="sub-sub-header">Coffee Liqueurs</div>
+		</h3>
+		<div class="drink-list">
+			<input type="checkbox" name="coffee">Coffee Liqueur<br>
+			<input type="checkbox" name="coffeecream">Coffee Cream Liqueur<br>
+			<input type="checkbox" name="coffeebrandy">Brandy Coffee Liqueur<br>
+			<input type="checkbox" name="coffeerum">Rum Coffee Liqueur<br>
+			<input type="checkbox" name="coffeescotch">Scotch Coffee Liqueur<br>
+			<input type="checkbox" name="coffeetequila">Tequila Coffee Liqueur<br>
+		</div>
+			
+		<h3 class="drink-subtype-header">
+			<div class="sub-sub-header">Cream Liqueurs</div>
+		</h3>
+		<div class="drink-list">
+			<input type="checkbox" name="creamdulcedeleche">Dulche De Leche<br>
+			<input type="checkbox" name="creameggvanilla">Egg &amp; Vanilla (ex: Advocaat)<br>
+			<input type="checkbox" name="creampistachio">Pistachio Cream (ex: Ponche Diva)<br>
+			<input type="checkbox" name="creamrum">Rum Cream (ex: Cruzan Rum Cream)<br>
+			<input type="checkbox" name="creamvodkatoffee">Vodka &amp; Toffee (ex: Dooley's)<br>
+			<input type="checkbox" name="creamvodkavanilla">Vodka &amp; Vanilla<br>
+			<input type="checkbox" name="creamwhiskey">Whiskey Cream (ex: Bailey's Irish Cream)<br>
+		</div>
+			
+		<h3 class="drink-subtype-header">
+			<div class="sub-sub-header">Cr&egrave;me Liqueurs</div>
+		</h3>
+		<div class="drink-list">
+			<input type="checkbox" name="cremebanane">Cr&egrave;me De Banane (Banana)<br>
+			<input type="checkbox" name="cremecacao">Cr&egrave;me De Cacao (Chocolate)<br>
+			<input type="checkbox" name="cremecassis">Cr&egrave;me De Cassis (Blackcurrant)<br>
+			<input type="checkbox" name="cremecerise">Cr&egrave;me De Cerise (Cherry)<br>
+			<input type="checkbox" name="cremefragola">Crema Di Fragola (Strawberry)<br>
+			<input type="checkbox" name="cremementhe">Cr&egrave;me De Menthe (Mint)<br>
+			<input type="checkbox" name="crememure">Cr&egrave;me De M&ucirc;re (Blackberry)<br>
+			<input type="checkbox" name="cremenoyaux">Cr&egrave;me De Noyaux (Almond)<br>
+		</div>
+			
+		<h3 class="drink-subtype-header">
+			<div class="sub-sub-header">Floral &amp; Herbal Liqueurs</div>
+		</h3>
+		<div class="drink-list">
+			<input type="checkbox" name="floweranise">Anise Liqueur<br>
+			<input type="checkbox" name="flowerbitters">Bitters Liqueur<br>
+			<input type="checkbox" name="flowercinnamon">Cinnamon Liqueur<br>
+			<input type="checkbox" name="flowerelderflower">Elderflower Liqueur<br>
+			<input type="checkbox" name="flowerhibiscus">Hibiscus Liqueur<br>
+			<input type="checkbox" name="flowerhoney">Honey Liqueur<br>
+			<input type="checkbox" name="flowerlavender">Lavender Liqueur<br>
+			<input type="checkbox" name="flowerlotus">Lotus Liqueur<br>
+			<input type="checkbox" name="flowermint">Mint Liqueur<br>
+			<input type="checkbox" name="flowerpeppermint">Peppermint Liqueur<br>
+			<input type="checkbox" name="flowerrose">Rose Liqueur<br>
+			<input type="checkbox" name="flowervanilla">Vanilla Liqueur<br>
+			<input type="checkbox" name="flowerviolet">Violet Liqueur<br>
+		</div>
+			
+		<h3 class="drink-subtype-header">
+			<div class="sub-sub-header">Fruit Liqueurs</div>
+		</h3>
+		<div class="drink-list">
+			<input type="checkbox" name="fruitapricot">Apricot Liqueur<br>
+			<input type="checkbox" name="fruitartichoke">Artichoke Liqueur<br>
+			<input type="checkbox" name="fruitbanana">Banana Liqueur<br>
+			<input type="checkbox" name="fruitgreenapple">Green Apple Liqueur<br>
+			<input type="checkbox" name="fruitlemon">Lemon Liqueur<br>
+			<input type="checkbox" name="fruitlime">Lime Liqueur<br>
+			<input type="checkbox" name="fruitmelon">Melon Liqueur<br>
+			<input type="checkbox" name="fruitorange">Orange (Sweet) Liqueur<br>
+			<input type="checkbox" name="fruitbitterorange">Orange (Bitter) Liqueur<br>
+			<input type="checkbox" name="fruitpear">Pear Liqueur<br>
+			<input type="checkbox" name="fruitplum">Plum Liqueur<br>
+			<input type="checkbox" name="fruitpomegranate">Pomegranate Liqueur<br>
+			<input type="checkbox" name="fruitpricklypear">Prickly Pear Liqueur<br>
+			<input type="checkbox" name="fruittropical">Tropical Fruit Liqueur<br>
+		</div>
+			
+		<h3 class="drink-subtype-header">
+			<div class="sub-sub-header">Nut-Flavored Liqueurs</div>
+		</h3>
+		<div class="drink-list">
+			<input type="checkbox" name="nutalmond">Almond Liqueur<br>
+			<input type="checkbox" name="nutpistachio">Pistachio Liqueur<br>
+			<input type="checkbox" name="nuthazelnut">Hazelnut Liqueur<br>
+			<input type="checkbox" name="nutmacadamia">Macadamia Nut Liqueur<br>
+			<input type="checkbox" name="nutwalnut">Walnut Liqueur<br>
+			<input type="checkbox" name="nutpeanut">Peanut Liqueur<br>
+		</div>
+		
+	<h2 class="drink-type-header">
+		<div class="sub-header">Non-Alcoholic:</div>
+	</h2>
+		<h3 class="drink-subtype-header">
+			<div class="sub-sub-header">Juices</div>
+		</h3>
+		<div class="drink-list">
+			<input type="checkbox" name="juicecranberry">Cranberry Juice<br>
+			<input type="checkbox" name="juicegrapefruit">Grapefruit Juice<br>
+			<input type="checkbox" name="juicelemon">Lemon Juice<br>
+			<input type="checkbox" name="juicelime">Lime Juice<br>
+			<input type="checkbox" name="juiceorange">Orange Juice<br>
+			<input type="checkbox" name="juicepineapple">Pineapple Juice<br>
+			<input type="checkbox" name="juicetomato">Tomato Juice<br>
+		</div>
+				
+		<h3 class="drink-subtype-header">
+			<div class="sub-sub-header">Sodas</div>
+		</h3>
+		<div class="drink-list">
+			<input type="checkbox" name="sodaclub">Club Soda<br>
+			<input type="checkbox" name="sodatonic">Tonic Water<br>
+			<input type="checkbox" name="sodacola">Cola Soda<br>
+			<input type="checkbox" name="sodalemonlime">Lemon Lime Soda<br>
+			<input type="checkbox" name="sodagingerale">Ginger Ale<br>
+		</div>
+			
+		<h3 class="drink-subtype-header">
+			<div class="sub-sub-header">Other</div>
+		</h3>
+		<div class="drink-list">
+			<input type="checkbox" name="otherbitters">Bitters<br>
+			<input type="checkbox" name="othercoffee">Coffee<br>
+			<input type="checkbox" name="othergrenadine">Grenadine<br>
+			<input type="checkbox" name="otherhalfandhalf">Half &amp; Half<br>
+			<input type="checkbox" name="othermargaritamix">Margarita Mix<br>
+			<input type="checkbox" name="othermilk">Milk<br>
+			<input type="checkbox" name="othersourmix">Sour Mix<br>
+			<input type="checkbox" name="othertabasco">Tabasco Sauce<br>
+			<input type="checkbox" name="othertea">Tea<br>
+			<input type="checkbox" name="otherworcestershire">Worcestershire Sauce<br>
+		</div>
+		<br>
+		<input type="submit" name="submit"><br>	
+	</form>
+</body>
