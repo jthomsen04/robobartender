@@ -11,41 +11,44 @@ from google.appengine.ext import db
 root_dir = os.path.dirname(__file__)
 template_dir = os.path.join(root_dir, 'templates')
 
-app = WSGIApplication([
-        Route(r'/', handler='modules.homepage.HomePage', name='homepage')], 
-        debug=True)
-'''
-# Set useful fields
-root_dir = os.path.dirname(__file__)
-template_dir = os.path.join(root_dir, 'templates')
-
 class Users(db.Model):
-    username = db.StringProperty(required = True)
-    phash = db.StringProperty(required = True)
-    email = db.StringProperty(required = False)
-    chips = db.FloatProperty(required = True)
-    chipresets = db.IntegerProperty(required = True)
-    bjwins = db.IntegerProperty(required = True)
-    bjlosses = db.IntegerProperty(required = True)
-    bjgames = db.IntegerProperty(required = True)
-    bjearnings = db.FloatProperty(required = True)
-
-class BlackjackGames(db.Model):
-    gameuser = db.StringProperty(required = True)
-    gameuserid = db.IntegerProperty(required = True)
-    playerhand = db.StringListProperty(required = True)
-    playerhand2 = db.StringListProperty(required = True)
-    playerhand3 = db.StringListProperty(required = True)
-    playerhand4 = db.StringListProperty(required = True)
-    playerbet = db.IntegerProperty(required = True)
-    playerbet2 = db.IntegerProperty(required = True)
-    playerbet3 = db.IntegerProperty(required = True)
-    playerbet4 = db.IntegerProperty(required = True)
-    dealerhand = db.StringListProperty(required = True)
-    deck = db.StringListProperty(required = True)
-
+    u_name = db.StringProperty(required = True)
+    p_hash = db.StringProperty(required = True)
+    email = db.StringProperty(required = True)
     
+class Drinks(db.Model):
+    d_name = db.StringProperty(required = True)
+    instructions = db.TextProperty(required = True)
+    rating = db.IntegerProperty(required = False)
 
+class Ingredients(db.Model):
+    i_name = db.StringProperty(required = True)
+    
+class Measurements(db.Model):
+    d_id = db.IntegerProperty(required = True)
+    i_id = db.IntegerProperty(required = True)
+    quantity = db.IntegerProperty(required = True)
+    measurement = db.StringProperty(required = True)
+    
+class Reviews(db.Model):
+    u_id = db.IntegerProperty(required = True)
+    d_id = db.IntegerProperty(required = True)
+    rating = db.IntegerProperty(required = True)
+    review = db.TextProperty(required = False)
+    
+class Favorites(db.Model):
+    u_id = db.IntegerProperty(required = True)
+    d_id = db.IntegerProperty(required = True)
+    rating = db.IntegerProperty(required = False)
+
+app = WSGIApplication([
+        Route(r'/', handler='modules.homepage.HomePage', name='homepage'),
+        Route(r'/login', handler='modules.authentication.Login', name='login'),
+        Route(r'/signup', handler='modules.authentication.SignUp', name='signup'),
+        Route(r'/logout', handler='modules.authentication.LogOut', name='logout')], 
+        debug=True)
+
+'''
 # Create the WSGI application and define route handlers
 app = WSGIApplication([
         Route(r'/', handler='modules.mainpage.MainPage', name='mainpage'),

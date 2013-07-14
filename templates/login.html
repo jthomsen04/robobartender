@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Login Form</title>
+		<!--<link type="text/css" rel="stylesheet" href="/stylesheets/casinostyle.css" />-->
+	</head>
+	
+	<body>
+		<div class="navigation"><a href=/ >RoboBartender Front Page</a></div>
+		
+		<form method="post" id="front">
+			<span id="message">
+				Please enter your username and password.<br />
+				Username: <input type="text" name="username" value="{{ username }}" /><br />
+				Password: <input type="password" name="password" value="" /><br />
+				<div style="color:red">{{ error }}</div>
+				<input type="submit" value="Submit"/>
+			</span>
+		</form>
+	</body>
+</html>
