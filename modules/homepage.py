@@ -8,7 +8,7 @@ from modules.authentication import validate
 from main import Users
 
 
-class MainPage(AppHandler):
+class HomePage(AppHandler):
     '''
     classdocs
     '''
