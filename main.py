@@ -27,7 +27,7 @@ class Ingredients(db.Model):
 class Measurements(db.Model):
     d_id = db.IntegerProperty(required = True)
     i_id = db.IntegerProperty(required = True)
-    quantity = db.IntegerProperty(required = True)
+    quantity = db.FloatProperty(required = True)
     measurement = db.StringProperty(required = True)
     
 class Reviews(db.Model):
