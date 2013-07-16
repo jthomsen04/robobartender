@@ -9,9 +9,10 @@ from main import Drinks
 
 import csv
 
-class db_loader(AppHandler):
+class DB_Loader(AppHandler):
 
-    def __init__(self):
+    def get(self):
+        self.render("loader_page.html")
         with open('drinklist.csv', 'rb') as d:
             reader = csv.reader(d)
             for row in reader:
@@ -22,6 +23,7 @@ class db_loader(AppHandler):
                         rating_count = int(row[4]), 
                         rating_total = int(row[5]))
                 drink.put()
+        
                     
  
         

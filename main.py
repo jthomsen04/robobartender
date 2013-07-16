@@ -48,7 +48,8 @@ app = WSGIApplication([
         Route(r'/', handler='modules.homepage.HomePage', name='homepage'),
         Route(r'/login', handler='modules.authentication.Login', name='login'),
         Route(r'/signup', handler='modules.authentication.SignUp', name='signup'),
-        Route(r'/logout', handler='modules.authentication.LogOut', name='logout')], 
+        Route(r'/logout', handler='modules.authentication.LogOut', name='logout'),
+        Route(r'/db_loader', handler='modules.db_loader.DB_Loader', name='db_loader')], 
         debug=True)
 
 #if __name__ == '__main__':
