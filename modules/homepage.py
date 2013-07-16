@@ -16,6 +16,7 @@ class HomePage(AppHandler):
         user_id = validate(self.request.cookies.get('user_id'))
         if user_id:
             user = Users.get_by_id(int(user_id))
+            
             self.render('logged-in.html', username = user.u_name)
         else:
             user = None

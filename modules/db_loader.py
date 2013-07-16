@@ -12,18 +12,25 @@ import csv
 class DB_Loader(AppHandler):
 
     def get(self):
-        self.render("loader_page.html")
-        with open('drinklist.csv', 'rb') as d:
-            reader = csv.reader(d)
-            for row in reader:
-                drink = Drinks(d_ID = int(row[0]), 
-                        d_name = row[1], 
-                        instructions = row[2], 
-                        average_rating = float(row[3]), 
-                        rating_count = int(row[4]), 
-                        rating_total = int(row[5]))
-                drink.put()
         
-                    
- 
+        self.render("loader_page.html")
+        
+        def unicode_csv_reader(unicode_csv_data="drinklist.csv", dialect=csv.excel, **kwargs):
+            # csv.py doesn't do Unicode; encode temporarily as UTF-8:
+            csv_reader = csv.reader(utf_8_encoder(unicode_csv_data),dialect=dialect, **kwargs)
+            for row in csv_reader:
+                # decode UTF-8 back to Unicode, cell by cell:
+                yield [unicode(cell, 'utf-8') for cell in row]
+
+            def utf_8_encoder(unicode_csv_data):
+                for line in unicode_csv_data:
+                    drink = Drinks(d_ID = int(line[0]), 
+                        d_name = line[1],
+                        instructions = line[2], 
+                        average_rating = float(line[3]), 
+                        rating_count = int(line[4]), 
+                        rating_total = int(line[5]))
+                    drink.put()
+        unicode_csv_reader()
+
         
