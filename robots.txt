@@ -1,0 +1,4 @@
+# App in extremely early stages of development. Disallow all crawlers.
+
+User-agent: *
+Disallow: /

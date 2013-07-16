@@ -17,9 +17,12 @@ class Users(db.Model):
     email = db.StringProperty(required = True)
     
 class Drinks(db.Model):
+    d_ID = db.IntegerProperty(required = True)
     d_name = db.StringProperty(required = True)
     instructions = db.TextProperty(required = True)
-    rating = db.IntegerProperty(required = False)
+    average_rating = db.FloatProperty(required = False)
+    rating_count = db.IntegerProperty(required = False)
+    rating_total = db.IntegerProperty(required = False)
 
 class Ingredients(db.Model):
     i_name = db.StringProperty(required = True)
@@ -47,23 +50,6 @@ app = WSGIApplication([
         Route(r'/signup', handler='modules.authentication.SignUp', name='signup'),
         Route(r'/logout', handler='modules.authentication.LogOut', name='logout')], 
         debug=True)
-
-'''
-# Create the WSGI application and define route handlers
-app = WSGIApplication([
-        Route(r'/', handler='modules.mainpage.MainPage', name='mainpage'),
-        Route(r'/login', handler='modules.authentication.Login', name='login'),
-        Route(r'/signup', handler='modules.authentication.SignUp', name='signup'),
-        Route(r'/logout', handler='modules.authentication.Logout', name='logout'),
-        Route(r'/newbj', handler='modules.game.NewBlackjack', name='newbj'),
-        Route(r'/insurancebj', handler='modules.game.InsuranceBlackjack', name='insurancebj'),
-        Route(r'/loseins', handler='modules.game.LoseInsurance', name='loseins'),
-        Route(r'/playbj', handler='modules.game.PlayBlackjack', name='playbj'),
-        #Route(r'/resetchips', handler='modules.game.ResetChips', name='resetchips'),
-        Route(r'/resultsbj', handler='modules.game.ResultsBlackjack', name='resultsbj')], 
-        debug=True)
-'''
-
 
 #if __name__ == '__main__':
 #    pass
