@@ -4,15 +4,23 @@ Created on Jul 15, 2013
 @author: Justin
 '''
 import csv
-from main import Drinks
 
-with open('drinklist.csv', 'rb') as d:
-    reader = csv.reader(d)
-    for row in reader:
-        drink = Drinks(d_ID = int(row[0]), 
-                        d_name = row[1], 
-                        instructions = row[2], 
-                        average_rating = float(row[3]), 
-                        rating_count = int(row[4]), 
-                        rating_total = int(row[5]))
-        print drink.d_ID, drink.d_name, drink.instructions, drink.average_rating, drink.rating_count, drink.rating_total
+def unicode_csv_reader(unicode_csv_data, dialect=csv.excel, **kwargs):
+    def utf_8_encoder(unicode_csv_data):
+        drinks = []
+        for line in unicode_csv_data:
+            drinks.append(line)
+            print line
+        print drinks
+        print 'a'
+        yield drinks
+        
+    # csv.py doesn't do Unicode; encode temporarily as UTF-8:
+    csv_reader = csv.reader(utf_8_encoder(unicode_csv_data), dialect=dialect, **kwargs)
+    for row in csv_reader:
+        # decode UTF-8 back to Unicode, cell by cell:
+        print [unicode(cell, 'utf-8') for cell in row]
+        
+    
+
+unicode_csv_reader(open('drinklist.csv'))
